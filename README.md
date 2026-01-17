@@ -83,9 +83,20 @@ yarn add chalkboard-ui
 pnpm add chalkboard-ui
 ```
 
-### Tailwind CSS Setup
+### Styles Setup
 
-Chalkboard UI uses Tailwind CSS. Add the library's component paths to your `tailwind.config.ts`:
+**Option 1: Import the prebuilt CSS**
+
+Import the bundled stylesheet in your app's entry point:
+
+```tsx
+// main.tsx or App.tsx
+import "chalkboard-ui/styles.css";
+```
+
+**Option 2: Tailwind CSS integration**
+
+If you want to customize styles or use Tailwind's purging, add the library to your `tailwind.config.ts`:
 
 ```ts
 import type { Config } from "tailwindcss";
@@ -155,6 +166,46 @@ A customizable button component.
 | `children` | `ReactNode` | - | Button content |
 
 Plus all standard HTML button attributes.
+
+### DropdownMenu
+
+A compound component for building accessible dropdown menus.
+
+```tsx
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "chalkboard-ui";
+
+function App() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger>
+        <Button>Open Menu</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuItem onSelect={() => console.log("Edit")}>
+          Edit
+        </DropdownMenuItem>
+        <DropdownMenuItem onSelect={() => console.log("Delete")}>
+          Delete
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+```
+
+**Components:**
+
+| Component | Description |
+|-----------|-------------|
+| `DropdownMenu` | Root component that manages open/close state |
+| `DropdownMenuTrigger` | Wraps the element that toggles the menu |
+| `DropdownMenuContent` | Container for menu items, renders as a portal |
+| `DropdownMenuItem` | Individual menu item with `onSelect` callback |
 
 ## Contributing
 
