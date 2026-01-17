@@ -1,0 +1,27 @@
+{
+  "name": "chalkboard-ui-monorepo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "bun run --cwd apps/docs dev",
+    "build": "bun run --cwd packages/chalkboard build",
+    "build:all": "bun run build && bun run --cwd apps/docs build",
+    "lint": "eslint .",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@typescript-eslint/eslint-plugin": "^8.53.0",
+    "@typescript-eslint/parser": "^8.53.0",
+    "eslint": "^9.39.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "globals": "^17.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^4.0.17"
+  }
+}
