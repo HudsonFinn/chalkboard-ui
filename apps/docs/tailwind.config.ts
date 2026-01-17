@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Monaspace Radon", "system-ui", "sans-serif"],
+        mono: ["Monaspace Radon", "monospace"],
+      },
       colors: {
         chalkboard: {
           background: "#FFFAF6",

@@ -1,0 +1,8 @@
+@import "@fontsource/monaspace-radon/200.css";
+@import "@fontsource/monaspace-radon/300.css";
+@import "@fontsource/monaspace-radon/400.css";
+@import "@fontsource/monaspace-radon/500.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
