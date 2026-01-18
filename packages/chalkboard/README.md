@@ -74,12 +74,40 @@ function App() {
 
 ## Components
 
+### Icon
+
+```tsx
+import { Icon } from "chalkboard-ui";
+
+<Icon name="search" />
+<Icon name="info" size="sm" />
+<Icon name="warning" size="lg" className="text-red-500" />
+```
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `name` | `IconName` | required | Icon identifier |
+| `size` | `"sm"` \| `"md"` \| `"lg"` | `"md"` | Icon size (16px, 20px, 24px) |
+| `className` | `string` | `""` | Additional classes |
+
+**Available icons:** `search`, `menu`, `close`, `chevron-down`, `chevron-right`, `arrow-left`, `arrow-right`, `external-link`, `edit`, `trash`, `copy`, `settings`, `plus`, `minus`, `info`, `warning`, `error`, `check`, `mail`, `link`, `user`, `home`, `star`
+
 ### Button
+
+```tsx
+import { Button } from "chalkboard-ui";
+
+<Button leftIcon="search">Search</Button>
+<Button rightIcon="arrow-right">Next</Button>
+<Button leftIcon="plus" rightIcon="chevron-down">Add Item</Button>
+```
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | `variant` | `"primary"` \| `"secondary"` \| `"outline"` | `"primary"` | Visual style |
 | `size` | `"sm"` \| `"md"` \| `"lg"` | `"md"` | Button size |
+| `leftIcon` | `IconName` | - | Icon before text |
+| `rightIcon` | `IconName` | - | Icon after text |
 
 ### DropdownMenu
 
@@ -96,15 +124,23 @@ import {
     <Button>Open Menu</Button>
   </DropdownMenuTrigger>
   <DropdownMenuContent>
-    <DropdownMenuItem onSelect={() => console.log("Edit")}>
+    <DropdownMenuItem iconName="edit" onClick={() => console.log("Edit")}>
       Edit
     </DropdownMenuItem>
-    <DropdownMenuItem onSelect={() => console.log("Delete")}>
+    <DropdownMenuItem iconName="trash" onClick={() => console.log("Delete")}>
       Delete
     </DropdownMenuItem>
   </DropdownMenuContent>
 </DropdownMenu>
 ```
+
+**DropdownMenuItem Props:**
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `iconName` | `IconName` | Icon to display |
+| `onClick` | `() => void` | Click handler |
+| `disabled` | `boolean` | Disable the item |
 
 ### Typography
 

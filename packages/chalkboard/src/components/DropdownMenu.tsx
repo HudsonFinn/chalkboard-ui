@@ -6,6 +6,7 @@ import React, {
   useCallback,
   useEffect,
 } from "react";
+import { Icon, IconName } from "./Icon";
 
 // Context for sharing state between components
 type TimeoutHandle = ReturnType<typeof setTimeout> | null;
@@ -209,7 +210,7 @@ export function DropdownMenuContent({
 // Individual menu item
 export interface DropdownMenuItemProps {
   children: React.ReactNode;
-  icon?: React.ReactNode;
+  iconName?: IconName;
   onClick?: () => void;
   disabled?: boolean;
   className?: string;
@@ -217,7 +218,7 @@ export interface DropdownMenuItemProps {
 
 export function DropdownMenuItem({
   children,
-  icon,
+  iconName,
   onClick,
   disabled = false,
   className = "",
@@ -255,8 +256,10 @@ export function DropdownMenuItem({
       onKeyDown={handleKeyDown}
       aria-disabled={disabled}
     >
-      {icon && (
-        <span className="flex-shrink-0 text-chalkboard-primary">{icon}</span>
+      {iconName && (
+        <span className="flex-shrink-0 text-chalkboard-primary">
+          <Icon name={iconName} size="sm" />
+        </span>
       )}
       <span>{children}</span>
     </div>

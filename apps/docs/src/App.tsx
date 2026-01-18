@@ -4,6 +4,8 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
+  Icon,
+  IconName,
   H1,
   H2,
   H3,
@@ -18,75 +20,32 @@ import {
   Pre,
 } from "chalkboard-ui";
 
-// Simple icon components for demo
-const EditIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
-    <path d="m15 5 4 4" />
-  </svg>
-);
-
-const TrashIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M3 6h18" />
-    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
-    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
-  </svg>
-);
-
-const CopyIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
-    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
-  </svg>
-);
-
-const SettingsIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
-    <circle cx="12" cy="12" r="3" />
-  </svg>
-);
+// All available icons for the showcase
+const allIcons: IconName[] = [
+  "search",
+  "menu",
+  "close",
+  "chevron-down",
+  "chevron-right",
+  "arrow-left",
+  "arrow-right",
+  "external-link",
+  "edit",
+  "trash",
+  "copy",
+  "settings",
+  "plus",
+  "minus",
+  "info",
+  "warning",
+  "error",
+  "check",
+  "mail",
+  "link",
+  "user",
+  "home",
+  "star",
+];
 
 function App() {
   return (
@@ -100,13 +59,105 @@ function App() {
         </p>
 
         <section className="mb-12">
+          <h2 className="mb-4 text-2xl font-semibold text-chalkboard-foreground">
+            Icon
+          </h2>
+          <div className="space-y-6 rounded-lg border border-chalkboard-border bg-white p-6 shadow">
+            <div>
+              <h3 className="mb-3 text-lg font-medium text-chalkboard-foreground">
+                All Icons
+              </h3>
+              <div className="grid grid-cols-6 gap-4 sm:grid-cols-8 md:grid-cols-12">
+                {allIcons.map((iconName) => (
+                  <div
+                    key={iconName}
+                    className="flex flex-col items-center gap-1"
+                    title={iconName}
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-chalkboard-background text-chalkboard-foreground">
+                      <Icon name={iconName} />
+                    </div>
+                    <span className="text-xs text-chalkboard-foreground/60 truncate w-full text-center">
+                      {iconName}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-3 text-lg font-medium text-chalkboard-foreground">
+                Sizes
+              </h3>
+              <div className="flex items-end gap-6">
+                <div className="flex flex-col items-center gap-1">
+                  <Icon name="star" size="sm" />
+                  <span className="text-xs text-chalkboard-foreground/60">sm (16px)</span>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <Icon name="star" size="md" />
+                  <span className="text-xs text-chalkboard-foreground/60">md (20px)</span>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <Icon name="star" size="lg" />
+                  <span className="text-xs text-chalkboard-foreground/60">lg (24px)</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-3 text-lg font-medium text-chalkboard-foreground">
+                Custom Colors
+              </h3>
+              <div className="flex items-center gap-4">
+                <Icon name="info" className="text-blue-500" />
+                <Icon name="check" className="text-green-500" />
+                <Icon name="warning" className="text-yellow-500" />
+                <Icon name="error" className="text-red-500" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-12">
           <h2 className="mb-4 text-2xl font-semibold text-chalkboard-foreground">Button</h2>
-          <div className="flex flex-wrap gap-4 rounded-lg border border-chalkboard-border bg-white p-6 shadow">
-            <Button>Default Button</Button>
-            <Button variant="secondary">Secondary</Button>
-            <Button variant="outline">Outline</Button>
-            <Button size="sm">Small</Button>
-            <Button size="lg">Large</Button>
+          <div className="space-y-6 rounded-lg border border-chalkboard-border bg-white p-6 shadow">
+            <div>
+              <h3 className="mb-3 text-lg font-medium text-chalkboard-foreground">
+                Variants
+              </h3>
+              <div className="flex flex-wrap gap-4">
+                <Button>Default Button</Button>
+                <Button variant="secondary">Secondary</Button>
+                <Button variant="outline">Outline</Button>
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-3 text-lg font-medium text-chalkboard-foreground">
+                Sizes
+              </h3>
+              <div className="flex flex-wrap items-center gap-4">
+                <Button size="sm">Small</Button>
+                <Button size="md">Medium</Button>
+                <Button size="lg">Large</Button>
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-3 text-lg font-medium text-chalkboard-foreground">
+                With Icons
+              </h3>
+              <div className="flex flex-wrap gap-4">
+                <Button leftIcon="search">Search</Button>
+                <Button rightIcon="arrow-right">Next</Button>
+                <Button leftIcon="plus" rightIcon="chevron-down">
+                  Add Item
+                </Button>
+                <Button variant="outline" leftIcon="settings">
+                  Settings
+                </Button>
+                <Button variant="secondary" leftIcon="mail">
+                  Contact
+                </Button>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -120,23 +171,23 @@ function App() {
           <div className="flex flex-wrap gap-4 rounded-lg border border-chalkboard-border bg-white p-6 shadow">
             <DropdownMenu>
               <DropdownMenuTrigger>
-                <Button>Options</Button>
+                <Button rightIcon="chevron-down">Options</Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem
-                  icon={<EditIcon />}
+                  iconName="edit"
                   onClick={() => alert("Edit clicked")}
                 >
                   Edit
                 </DropdownMenuItem>
                 <DropdownMenuItem
-                  icon={<CopyIcon />}
+                  iconName="copy"
                   onClick={() => alert("Duplicate clicked")}
                 >
                   Duplicate
                 </DropdownMenuItem>
                 <DropdownMenuItem
-                  icon={<TrashIcon />}
+                  iconName="trash"
                   onClick={() => alert("Delete clicked")}
                 >
                   Delete
@@ -146,13 +197,16 @@ function App() {
 
             <DropdownMenu>
               <DropdownMenuTrigger>
-                <Button variant="outline">Actions</Button>
+                <Button variant="outline" rightIcon="chevron-down">
+                  Actions
+                </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem icon={<SettingsIcon />}>
+                <DropdownMenuItem iconName="settings">
                   Settings
                 </DropdownMenuItem>
-                <DropdownMenuItem disabled>
+                <DropdownMenuItem iconName="user">Profile</DropdownMenuItem>
+                <DropdownMenuItem disabled iconName="link">
                   Disabled Item
                 </DropdownMenuItem>
                 <DropdownMenuItem>No Icon Item</DropdownMenuItem>
@@ -161,11 +215,16 @@ function App() {
 
             <DropdownMenu>
               <DropdownMenuTrigger>
-                <Button variant="secondary">Right Aligned</Button>
+                <Button variant="secondary" rightIcon="chevron-down">
+                  Right Aligned
+                </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="right">
-                <DropdownMenuItem icon={<EditIcon />}>Edit</DropdownMenuItem>
-                <DropdownMenuItem icon={<CopyIcon />}>Copy</DropdownMenuItem>
+                <DropdownMenuItem iconName="home">Home</DropdownMenuItem>
+                <DropdownMenuItem iconName="star">Favorites</DropdownMenuItem>
+                <DropdownMenuItem iconName="external-link">
+                  Open in New Tab
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
