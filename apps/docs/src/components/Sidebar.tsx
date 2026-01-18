@@ -10,6 +10,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { path: "/", label: "Home", icon: "home" },
+  { path: "/colors", label: "Colors", icon: "star" },
   { path: "/button", label: "Button", icon: "plus" },
   { path: "/icon", label: "Icon", icon: "star" },
   { path: "/dropdown", label: "Dropdown Menu", icon: "chevron-down" },
@@ -46,7 +47,7 @@ export function Sidebar() {
       >
         <div className="flex h-full flex-col">
           {/* Header */}
-          <div className="flex items-center justify-between border-b border-chalkboard-border p-4">
+          <div className="flex items-center justify-between border-b border-chalkboard-secondary p-4">
             <span className="text-lg font-semibold text-chalkboard-foreground">
               Chalkboard UI
             </span>
@@ -84,7 +85,7 @@ export function Sidebar() {
           </nav>
 
           {/* Footer */}
-          <div className="border-t border-chalkboard-border p-4">
+          <div className="border-t border-chalkboard-secondary p-4">
             <p className="text-xs text-chalkboard-foreground/60">
               Built with React + Tailwind
             </p>

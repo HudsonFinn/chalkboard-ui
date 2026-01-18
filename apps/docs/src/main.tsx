@@ -7,6 +7,7 @@ import { ButtonPage } from "./pages/ButtonPage";
 import { IconPage } from "./pages/IconPage";
 import { DropdownPage } from "./pages/DropdownPage";
 import { TypographyPage } from "./pages/TypographyPage";
+import { ColorsPage } from "./pages/ColorsPage";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="icon" element={<IconPage />} />
           <Route path="dropdown" element={<DropdownPage />} />
           <Route path="typography" element={<TypographyPage />} />
+          <Route path="colors" element={<ColorsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

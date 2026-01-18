@@ -9,9 +9,9 @@ export interface CodeExampleProps {
 
 export function CodeExample({ title, code, children }: CodeExampleProps) {
   return (
-    <div className="rounded-lg border border-chalkboard-border bg-white shadow">
+    <div className="rounded-lg border border-chalkboard-secondary bg-white shadow">
       {title && (
-        <div className="border-b border-chalkboard-border px-4 py-3">
+        <div className="border-b border-chalkboard-secondary px-4 py-3">
           <H3 className="!text-sm !font-medium !md:text-sm">{title}</H3>
         </div>
       )}

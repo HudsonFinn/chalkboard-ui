@@ -39,6 +39,15 @@ This is a Bun monorepo with two workspaces:
 - Consumes `chalkboard-ui` as a workspace dependency
 - Vite + React + TypeScript
 - Tailwind config includes paths to library components for proper style purging
+- **IMPORTANT**: Always use components from `chalkboard-ui` instead of native HTML elements. For example:
+  - Use `<H1>`, `<H2>`, `<H3>`, etc. instead of `<h1>`, `<h2>`, `<h3>`
+  - Use `<P>` instead of `<p>`
+  - Use `<Small>` instead of `<small>`
+  - Use `<Code>` instead of `<code>`
+  - Use `<Pre>` instead of `<pre>`
+  - Use `<Blockquote>` instead of `<blockquote>`
+  - Use `<Button>` instead of `<button>`
+  - This ensures consistent styling and demonstrates the library's components in action
 
 ## Adding Components
 

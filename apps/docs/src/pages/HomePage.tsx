@@ -10,6 +10,7 @@ import {
   H2,
   P,
   Lead,
+  Small,
 } from "chalkboard-ui";
 
 export function HomePage() {
@@ -27,7 +28,7 @@ export function HomePage() {
         {/* Button Preview */}
         <Link
           to="/button"
-          className="group rounded-lg border border-chalkboard-border bg-white p-6 shadow transition-shadow hover:shadow-md"
+          className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
         >
           <div className="mb-4 flex items-center justify-between">
             <H2 className="text-lg">Button</H2>
@@ -53,7 +54,7 @@ export function HomePage() {
         {/* Icon Preview */}
         <Link
           to="/icon"
-          className="group rounded-lg border border-chalkboard-border bg-white p-6 shadow transition-shadow hover:shadow-md"
+          className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
         >
           <div className="mb-4 flex items-center justify-between">
             <H2 className="text-lg">Icon</H2>
@@ -78,7 +79,7 @@ export function HomePage() {
         {/* Dropdown Preview */}
         <Link
           to="/dropdown"
-          className="group rounded-lg border border-chalkboard-border bg-white p-6 shadow transition-shadow hover:shadow-md"
+          className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
         >
           <div className="mb-4 flex items-center justify-between">
             <H2 className="text-lg">Dropdown Menu</H2>
@@ -109,7 +110,7 @@ export function HomePage() {
         {/* Typography Preview */}
         <Link
           to="/typography"
-          className="group rounded-lg border border-chalkboard-border bg-white p-6 shadow transition-shadow hover:shadow-md"
+          className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
         >
           <div className="mb-4 flex items-center justify-between">
             <H2 className="text-lg">Typography</H2>
@@ -122,11 +123,11 @@ export function HomePage() {
             Headings, paragraphs, blockquotes, and code blocks.
           </P>
           <div className="space-y-1 text-sm">
-            <p className="font-semibold">H1 - H6 Headings</p>
-            <p className="text-chalkboard-foreground/70">
+            <P className="font-semibold">H1 - H6 Headings</P>
+            <Small className="block text-chalkboard-foreground/70">
               Paragraphs, Lead, Small
-            </p>
-            <p className="text-chalkboard-foreground/70">Code blocks & more</p>
+            </Small>
+            <Small className="block text-chalkboard-foreground/70">Code blocks & more</Small>
           </div>
         </Link>
       </div>

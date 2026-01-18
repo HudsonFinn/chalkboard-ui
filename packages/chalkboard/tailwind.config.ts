@@ -14,7 +14,7 @@ const config: Config = {
           foreground: "#0d1321",
           primary: "#66717e",
           success: "#83781b",
-          border: "#8d818c",
+          secondary: "#8d818c",
         },
       },
       keyframes: {

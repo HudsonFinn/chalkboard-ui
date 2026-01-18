@@ -196,7 +196,7 @@ export function DropdownMenuContent({
     <div
       ref={contentRef}
       role="menu"
-      className={`absolute top-full z-50 mt-1 min-w-[160px] animate-dropdown-in rounded-lg border border-chalkboard-border bg-white py-1 shadow-lg ${alignmentClass} ${className}`.trim()}
+      className={`absolute top-full z-50 mt-1 min-w-[160px] animate-dropdown-in rounded-lg border border-chalkboard-secondary bg-white py-1 shadow-lg ${alignmentClass} ${className}`.trim()}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onKeyDown={handleKeyDown}
@@ -244,7 +244,7 @@ export function DropdownMenuItem({
   const baseStyles =
     "flex w-full items-center gap-2 px-3 py-2 text-left text-sm transition-colors";
   const stateStyles = disabled
-    ? "cursor-not-allowed text-chalkboard-border"
+    ? "cursor-not-allowed text-chalkboard-secondary"
     : "cursor-pointer text-chalkboard-foreground hover:bg-chalkboard-primary/10 focus:bg-chalkboard-primary/10 focus:outline-none";
 
   return (

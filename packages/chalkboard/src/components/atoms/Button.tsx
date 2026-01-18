@@ -14,7 +14,7 @@ const variantStyles = {
   primary:
     "bg-chalkboard-primary text-chalkboard-background hover:opacity-90 focus:ring-chalkboard-primary",
   secondary:
-    "bg-chalkboard-border text-chalkboard-background hover:opacity-90 focus:ring-chalkboard-border",
+    "bg-chalkboard-secondary text-chalkboard-background hover:opacity-90 focus:ring-chalkboard-secondary",
   outline:
     "border-2 border-chalkboard-foreground text-chalkboard-foreground hover:bg-chalkboard-foreground/10 focus:ring-chalkboard-primary",
 };
