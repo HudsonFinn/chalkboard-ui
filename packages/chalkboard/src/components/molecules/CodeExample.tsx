@@ -1,6 +1,7 @@
-import { Pre } from "chalkboard-ui";
+import * as React from "react";
+import { H3, Small, Pre } from "../atoms/Typography";
 
-interface CodeExampleProps {
+export interface CodeExampleProps {
   title?: string;
   code: string;
   children: React.ReactNode;
@@ -11,9 +12,7 @@ export function CodeExample({ title, code, children }: CodeExampleProps) {
     <div className="rounded-lg border border-chalkboard-border bg-white shadow">
       {title && (
         <div className="border-b border-chalkboard-border px-4 py-3">
-          <h3 className="text-sm font-medium text-chalkboard-foreground">
-            {title}
-          </h3>
+          <H3 className="!text-sm !font-medium !md:text-sm">{title}</H3>
         </div>
       )}
       <div className="p-4">
@@ -21,10 +20,10 @@ export function CodeExample({ title, code, children }: CodeExampleProps) {
           {children}
         </div>
         <div>
-          <span className="mb-2 block text-xs font-medium uppercase tracking-wide text-chalkboard-foreground/60">
+          <Small className="mb-2 block uppercase tracking-wide text-chalkboard-foreground/60">
             Code
-          </span>
-          <Pre>{code}</Pre>
+          </Small>
+          <Pre className="my-0">{code}</Pre>
         </div>
       </div>
     </div>

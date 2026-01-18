@@ -1,22 +1,9 @@
-// Components
-export { Button } from "./components/Button";
-export type { ButtonProps } from "./components/Button";
+// Atoms
+export { Button } from "./components/atoms/Button";
+export type { ButtonProps } from "./components/atoms/Button";
 
-export { Icon } from "./components/Icon";
-export type { IconName, IconProps } from "./components/Icon";
-
-export {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "./components/DropdownMenu";
-export type {
-  DropdownMenuProps,
-  DropdownMenuTriggerProps,
-  DropdownMenuContentProps,
-  DropdownMenuItemProps,
-} from "./components/DropdownMenu";
+export { Icon } from "./components/atoms/Icon";
+export type { IconName, IconProps } from "./components/atoms/Icon";
 
 export {
   H1,
@@ -31,7 +18,7 @@ export {
   Blockquote,
   Code,
   Pre,
-} from "./components/Typography";
+} from "./components/atoms/Typography";
 export type {
   H1Props,
   H2Props,
@@ -45,4 +32,21 @@ export type {
   BlockquoteProps,
   CodeProps,
   PreProps,
-} from "./components/Typography";
+} from "./components/atoms/Typography";
+
+// Molecules
+export {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "./components/molecules/DropdownMenu";
+export type {
+  DropdownMenuProps,
+  DropdownMenuTriggerProps,
+  DropdownMenuContentProps,
+  DropdownMenuItemProps,
+} from "./components/molecules/DropdownMenu";
+
+export { CodeExample } from "./components/molecules/CodeExample";
+export type { CodeExampleProps } from "./components/molecules/CodeExample";

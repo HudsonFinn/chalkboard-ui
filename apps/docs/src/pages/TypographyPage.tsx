@@ -11,8 +11,8 @@ import {
   Blockquote,
   Code,
   Pre,
+  CodeExample,
 } from "chalkboard-ui";
-import { CodeExample } from "../components/CodeExample";
 
 export function TypographyPage() {
   return (

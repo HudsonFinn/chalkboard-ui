@@ -1,5 +1,4 @@
-import { Icon, IconName, H1, P } from "chalkboard-ui";
-import { CodeExample } from "../components/CodeExample";
+import { Icon, IconName, H1, P, CodeExample } from "chalkboard-ui";
 
 const allIcons: IconName[] = [
   "search",

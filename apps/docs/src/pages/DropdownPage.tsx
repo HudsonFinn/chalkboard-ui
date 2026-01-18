@@ -6,8 +6,8 @@ import {
   DropdownMenuItem,
   H1,
   P,
+  CodeExample,
 } from "chalkboard-ui";
-import { CodeExample } from "../components/CodeExample";
 
 export function DropdownPage() {
   return (

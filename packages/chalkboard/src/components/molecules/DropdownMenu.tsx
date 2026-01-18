@@ -6,7 +6,7 @@ import React, {
   useCallback,
   useEffect,
 } from "react";
-import { Icon, IconName } from "./Icon";
+import { Icon, IconName } from "../atoms/Icon";
 
 // Context for sharing state between components
 type TimeoutHandle = ReturnType<typeof setTimeout> | null;

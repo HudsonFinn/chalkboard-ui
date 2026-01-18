@@ -1,5 +1,4 @@
-import { Button, H1, P } from "chalkboard-ui";
-import { CodeExample } from "../components/CodeExample";
+import { Button, H1, P, CodeExample } from "chalkboard-ui";
 
 export function ButtonPage() {
   return (
