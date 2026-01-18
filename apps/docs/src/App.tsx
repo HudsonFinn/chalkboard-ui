@@ -4,6 +4,18 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  P,
+  Lead,
+  Small,
+  Blockquote,
+  Code,
+  Pre,
 } from "chalkboard-ui";
 
 // Simple icon components for demo
@@ -156,6 +168,62 @@ function App() {
                 <DropdownMenuItem icon={<CopyIcon />}>Copy</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="mb-4 text-2xl font-semibold text-chalkboard-foreground">
+            Typography
+          </h2>
+          <div className="space-y-6 rounded-lg border border-chalkboard-border bg-white p-6 shadow">
+            <div className="space-y-4">
+              <H1>Heading 1</H1>
+              <H2>Heading 2</H2>
+              <H3>Heading 3</H3>
+              <H4>Heading 4</H4>
+              <H5>Heading 5</H5>
+              <H6>Heading 6</H6>
+            </div>
+
+            <hr className="border-chalkboard-border" />
+
+            <div className="space-y-4">
+              <Lead>
+                This is a lead paragraph. It's designed for introductory text
+                that should stand out from regular body copy.
+              </Lead>
+              <P>
+                This is a standard paragraph. It uses relaxed line-height for
+                comfortable reading. You can include <Code>inline code</Code>{" "}
+                within paragraphs to highlight technical terms or code snippets.
+              </P>
+              <P>
+                <Small>
+                  This is small text, useful for captions, footnotes, or fine
+                  print.
+                </Small>
+              </P>
+            </div>
+
+            <hr className="border-chalkboard-border" />
+
+            <div>
+              <Blockquote>
+                "Design is not just what it looks like and feels like. Design is
+                how it works." — Steve Jobs
+              </Blockquote>
+            </div>
+
+            <hr className="border-chalkboard-border" />
+
+            <div>
+              <P className="mb-2">Code block example:</P>
+              <Pre>{`function greet(name: string) {
+  return \`Hello, \${name}!\`;
+}
+
+console.log(greet("World"));`}</Pre>
+            </div>
           </div>
         </section>
       </div>
