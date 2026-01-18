@@ -57,11 +57,13 @@ export default config;
 ## Usage
 
 ```tsx
-import { Button } from "chalkboard-ui";
+import { Button, H1, P, Code } from "chalkboard-ui";
 
 function App() {
   return (
     <div>
+      <H1>Welcome</H1>
+      <P>Get started with <Code>chalkboard-ui</Code> components.</P>
       <Button>Click me</Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="outline">Outline</Button>
@@ -103,6 +105,36 @@ import {
   </DropdownMenuContent>
 </DropdownMenu>
 ```
+
+### Typography
+
+A set of semantic typography components with responsive sizing and consistent styling.
+
+```tsx
+import { H1, H2, H3, P, Lead, Small, Blockquote, Code, Pre } from "chalkboard-ui";
+
+<H1>Main Heading</H1>
+<H2>Section Heading</H2>
+<Lead>Introductory text that stands out from body copy.</Lead>
+<P>Regular paragraph with <Code>inline code</Code> support.</P>
+<Small>Caption or fine print text.</Small>
+<Blockquote>"A memorable quote."</Blockquote>
+<Pre>{`const code = "block";`}</Pre>
+```
+
+**Components:**
+
+| Component | Element | Description |
+|-----------|---------|-------------|
+| `H1` - `H6` | `<h1>` - `<h6>` | Headings with responsive sizing |
+| `P` | `<p>` | Standard paragraph text |
+| `Lead` | `<p>` | Larger introductory text |
+| `Small` | `<small>` | Captions and fine print |
+| `Blockquote` | `<blockquote>` | Quoted content with left border |
+| `Code` | `<code>` | Inline code snippets |
+| `Pre` | `<pre>` | Code blocks |
+
+All typography components accept standard HTML attributes and support `className` for style overrides.
 
 ## Requirements
 
