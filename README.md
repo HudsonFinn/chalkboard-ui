@@ -150,63 +150,6 @@ function App() {
   );
 }
 ```
-
-## Available Components
-
-### Button
-
-A customizable button component.
-
-**Props:**
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `variant` | `"primary"` \| `"secondary"` \| `"outline"` | `"primary"` | Visual style variant |
-| `size` | `"sm"` \| `"md"` \| `"lg"` | `"md"` | Button size |
-| `children` | `ReactNode` | - | Button content |
-
-Plus all standard HTML button attributes.
-
-### DropdownMenu
-
-A compound component for building accessible dropdown menus.
-
-```tsx
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "chalkboard-ui";
-
-function App() {
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger>
-        <Button>Open Menu</Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuItem onSelect={() => console.log("Edit")}>
-          Edit
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => console.log("Delete")}>
-          Delete
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
-}
-```
-
-**Components:**
-
-| Component | Description |
-|-----------|-------------|
-| `DropdownMenu` | Root component that manages open/close state |
-| `DropdownMenuTrigger` | Wraps the element that toggles the menu |
-| `DropdownMenuContent` | Container for menu items, renders as a portal |
-| `DropdownMenuItem` | Individual menu item with `onSelect` callback |
-
 ## Contributing
 
 ### Adding a New Component

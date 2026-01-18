@@ -112,9 +112,12 @@ function App() {
         </div>
       </div>
 
-      {/* Components Section */}
-      <div>
-        <H2 className="mb-6">Components</H2>
+      {/* Atoms Section */}
+      <div className="mb-12">
+        <H2 className="mb-2">Atoms</H2>
+        <P className="mb-6 text-chalkboard-foreground/70">
+          The fundamental building blocks of the design system.
+        </P>
 
         <div className="grid gap-8 md:grid-cols-2">
           {/* Colors Preview */}
@@ -193,6 +196,42 @@ function App() {
             </div>
           </Link>
 
+          {/* Typography Preview */}
+          <Link
+            to="/typography"
+            className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
+          >
+            <div className="mb-4 flex items-center justify-between">
+              <H3 className="text-lg">Typography</H3>
+              <Icon
+                name="arrow-right"
+                className="text-chalkboard-primary transition-transform group-hover:translate-x-1"
+              />
+            </div>
+            <P className="mb-4 text-sm text-chalkboard-foreground/70">
+              Headings, paragraphs, blockquotes, and code blocks.
+            </P>
+            <div className="space-y-1 text-sm">
+              <P className="font-semibold">H1 - H6 Headings</P>
+              <Small className="block text-chalkboard-foreground/70">
+                Paragraphs, Lead, Small
+              </Small>
+              <Small className="block text-chalkboard-foreground/70">
+                Code blocks & more
+              </Small>
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      {/* Molecules Section */}
+      <div>
+        <H2 className="mb-2">Molecules</H2>
+        <P className="mb-6 text-chalkboard-foreground/70">
+          Combinations of atoms that form more complex UI patterns.
+        </P>
+
+        <div className="grid gap-8 md:grid-cols-2">
           {/* Dropdown Preview */}
           <Link
             to="/dropdown"
@@ -242,32 +281,6 @@ function App() {
             <div className="space-y-2">
               <Message variant="success">Operation completed</Message>
               <Message variant="error">Something went wrong</Message>
-            </div>
-          </Link>
-
-          {/* Typography Preview */}
-          <Link
-            to="/typography"
-            className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
-          >
-            <div className="mb-4 flex items-center justify-between">
-              <H3 className="text-lg">Typography</H3>
-              <Icon
-                name="arrow-right"
-                className="text-chalkboard-primary transition-transform group-hover:translate-x-1"
-              />
-            </div>
-            <P className="mb-4 text-sm text-chalkboard-foreground/70">
-              Headings, paragraphs, blockquotes, and code blocks.
-            </P>
-            <div className="space-y-1 text-sm">
-              <P className="font-semibold">H1 - H6 Headings</P>
-              <Small className="block text-chalkboard-foreground/70">
-                Paragraphs, Lead, Small
-              </Small>
-              <Small className="block text-chalkboard-foreground/70">
-                Code blocks & more
-              </Small>
             </div>
           </Link>
         </div>

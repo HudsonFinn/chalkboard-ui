@@ -2,6 +2,8 @@
 
 A React component library built with Tailwind CSS.
 
+[chalkboard.finlayhu.com](https://chalkboard.finlayhu.com)
+
 ## Installation
 
 ```bash
