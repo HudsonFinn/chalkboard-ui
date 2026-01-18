@@ -46,3 +46,10 @@ This is a Bun monorepo with two workspaces:
 2. Export from `packages/chalkboard/src/index.ts`
 3. Add demo to `apps/docs/src/App.tsx`
 4. Rebuild: `bun run build`
+
+## Documentation Requirements
+
+When adding or modifying components in `packages/chalkboard/src/components/`, always update:
+
+1. **README** (`packages/chalkboard/README.md`) - Add/update component documentation with usage examples and props table
+2. **Docs site** (`apps/docs/src/App.tsx`) - Add/update interactive demos showcasing the component
