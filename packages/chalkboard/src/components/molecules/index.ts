@@ -13,3 +13,6 @@ export type {
 
 export { CodeExample } from "./CodeExample";
 export type { CodeExampleProps } from "./CodeExample";
+
+export { Message } from "./Message";
+export type { MessageProps, MessageVariant } from "./Message";

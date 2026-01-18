@@ -14,6 +14,7 @@ const navItems: NavItem[] = [
   { path: "/button", label: "Button", icon: "plus" },
   { path: "/icon", label: "Icon", icon: "star" },
   { path: "/dropdown", label: "Dropdown Menu", icon: "chevron-down" },
+  { path: "/message", label: "Message", icon: "info" },
   { path: "/typography", label: "Typography", icon: "edit" },
 ];
 

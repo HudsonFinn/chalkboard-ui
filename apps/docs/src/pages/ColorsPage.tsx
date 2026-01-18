@@ -53,18 +53,39 @@ const colors: ColorSwatchProps[] = [
       "The main accent color used for primary buttons, links, active states, and key interactive elements. A sophisticated slate gray-blue.",
   },
   {
-    name: "Success",
-    value: "#83781b",
-    cssVar: "chalkboard-success",
-    description:
-      "Used for success messages, confirmations, and positive feedback. An earthy olive-gold that conveys accomplishment.",
-  },
-  {
     name: "Secondary",
     value: "#8d818c",
     cssVar: "chalkboard-secondary",
     description:
       "Used for secondary buttons, borders, dividers, and subtle UI elements. A muted mauve that complements the primary color while providing softer emphasis.",
+  },
+  {
+    name: "Success",
+    value: "#63821B",
+    cssVar: "chalkboard-success",
+    description:
+      "Used for success messages, confirmations, and positive feedback. A rich olive green that conveys accomplishment and completion.",
+  },
+  {
+    name: "Error",
+    value: "#F76350",
+    cssVar: "chalkboard-error",
+    description:
+      "Used for error states, destructive actions, and critical alerts. A vibrant coral red that demands attention for important warnings.",
+  },
+  {
+    name: "Info",
+    value: "#9DCBBA",
+    cssVar: "chalkboard-info",
+    description:
+      "Used for informational messages, tips, and neutral notifications. A soft sage green that communicates helpful context without urgency.",
+  },
+  {
+    name: "Warning",
+    value: "#FDF5BF",
+    cssVar: "chalkboard-warning",
+    description:
+      "Used for warning messages and caution states. A soft pale yellow that alerts users to potential issues without causing alarm.",
   },
 ];
 
@@ -74,7 +95,7 @@ export function ColorsPage() {
       <div className="mb-8">
         <H1>Colors</H1>
         <P className="mt-2 text-chalkboard-foreground/70">
-          The Chalkboard design system uses a carefully curated palette of five
+          The Chalkboard design system uses a carefully curated palette of eight
           core colors. Each color serves a specific purpose and should be used
           consistently throughout your application.
         </P>
@@ -108,16 +129,19 @@ export function ColorsPage() {
                 <Code>bg-chalkboard-primary</Code> - Primary background
               </P>
               <P>
-                <Code>text-chalkboard-primary</Code> - Primary text/accent
-              </P>
-              <P>
-                <Code>bg-chalkboard-secondary</Code> - Secondary background
-              </P>
-              <P>
                 <Code>border-chalkboard-secondary</Code> - Border color
               </P>
               <P>
                 <Code>text-chalkboard-success</Code> - Success text
+              </P>
+              <P>
+                <Code>bg-chalkboard-error</Code> - Error/danger background
+              </P>
+              <P>
+                <Code>bg-chalkboard-info</Code> - Info background
+              </P>
+              <P>
+                <Code>bg-chalkboard-warning</Code> - Warning background
               </P>
             </div>
           </div>

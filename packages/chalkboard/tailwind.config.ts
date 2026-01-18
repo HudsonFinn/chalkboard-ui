@@ -13,8 +13,11 @@ const config: Config = {
           background: "#FFFAF6",
           foreground: "#0d1321",
           primary: "#66717e",
-          success: "#83781b",
           secondary: "#8d818c",
+          success: "#63821B",
+		  error: "#F76350",
+		  info: "#9DCBBA",
+		  warning: "#FDF5BF",
         },
       },
       keyframes: {

@@ -50,3 +50,6 @@ export type {
 
 export { CodeExample } from "./components/molecules/CodeExample";
 export type { CodeExampleProps } from "./components/molecules/CodeExample";
+
+export { Message } from "./components/molecules/Message";
+export type { MessageProps, MessageVariant } from "./components/molecules/Message";
