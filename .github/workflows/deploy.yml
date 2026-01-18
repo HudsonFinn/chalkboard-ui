@@ -1,0 +1,31 @@
+name: Deploy site
+
+on:
+    push:
+        branches:
+            - main
+
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        timeout-minutes: 10
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v2
+            - name: Install dependencies
+              run: bun install
+            - name: Run lint
+              run: bun run lint
+            - name: Build
+              run: bun run build:all
+            - name: Upload to S3
+              uses: jakejarvis/s3-sync-action@master
+              env:
+                  SOURCE_DIR: apps/docs/dist/
+                  AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+                  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
