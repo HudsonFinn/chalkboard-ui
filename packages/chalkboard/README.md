@@ -19,38 +19,31 @@ npm install chalkboard-ui
 import "chalkboard-ui/styles.css";
 ```
 
-**Option 2: Tailwind CSS integration**
+**Option 2: Tailwind CSS integration (recommended)**
 
-Add the library to your `tailwind.config.ts`:
+Use the library's Tailwind config as a preset to automatically inherit all theme settings (colors, fonts, animations):
 
 ```ts
 import type { Config } from "tailwindcss";
+import chalkboardConfig from "chalkboard-ui/tailwind.config";
 
 const config: Config = {
+  presets: [chalkboardConfig],
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/chalkboard-ui/dist/**/*.js",
   ],
-  theme: {
-    extend: {
-      colors: {
-        chalkboard: {
-          background: "#FFFAF6",
-          foreground: "#0d1321",
-          primary: "#66717e",
-          secondary: "#8d818c",
-          success: "#63821B",
-          error: "#F76350",
-          info: "#9DCBBA",
-          warning: "#FDF5BF",
-        },
-      },
-    },
-  },
   plugins: [],
 };
 
 export default config;
+```
+
+You'll also need to import the styles for the fonts:
+
+```tsx
+// main.tsx or App.tsx
+import "chalkboard-ui/styles.css";
 ```
 
 ## Usage

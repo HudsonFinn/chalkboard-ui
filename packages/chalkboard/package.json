@@ -11,10 +11,12 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./styles.css": "./dist/styles.css"
+    "./styles.css": "./dist/styles.css",
+    "./tailwind.config": "./tailwind.config.ts"
   },
   "files": [
-    "dist"
+    "dist",
+    "tailwind.config.ts"
   ],
   "scripts": {
     "build": "tsup",
@@ -36,6 +38,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@fontsource/monaspace-radon": "^5.2.5"
+    "@fontsource/monaspace-neon": "^5.2.5",
+    "@fontsource/monaspace-xenon": "^5.2.5"
   }
 }

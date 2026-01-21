@@ -94,41 +94,31 @@ Import the bundled stylesheet in your app's entry point:
 import "chalkboard-ui/styles.css";
 ```
 
-**Option 2: Tailwind CSS integration**
+**Option 2: Tailwind CSS integration (recommended)**
 
-If you want to customize styles or use Tailwind's purging, add the library to your `tailwind.config.ts`:
+Use the library's Tailwind config as a preset to automatically inherit all theme settings (colors, fonts, animations):
 
 ```ts
 import type { Config } from "tailwindcss";
+import chalkboardConfig from "chalkboard-ui/tailwind.config";
 
 const config: Config = {
+  presets: [chalkboardConfig],
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/chalkboard-ui/dist/**/*.js",
   ],
-  theme: {
-    extend: {
-      colors: {
-        chalkboard: {
-          50: "#f8fafc",
-          100: "#f1f5f9",
-          200: "#e2e8f0",
-          300: "#cbd5e1",
-          400: "#94a3b8",
-          500: "#64748b",
-          600: "#475569",
-          700: "#334155",
-          800: "#1e293b",
-          900: "#0f172a",
-          950: "#020617",
-        },
-      },
-    },
-  },
   plugins: [],
 };
 
 export default config;
+```
+
+You'll also need to import the styles for the fonts:
+
+```tsx
+// main.tsx or App.tsx
+import "chalkboard-ui/styles.css";
 ```
 
 ### Usage

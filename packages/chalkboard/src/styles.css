@@ -1,7 +1,8 @@
-@import "@fontsource/monaspace-radon/200.css";
-@import "@fontsource/monaspace-radon/300.css";
-@import "@fontsource/monaspace-radon/400.css";
-@import "@fontsource/monaspace-radon/500.css";
+@import "@fontsource/monaspace-xenon/200.css";
+@import "@fontsource/monaspace-xenon/300.css";
+@import "@fontsource/monaspace-xenon/400.css";
+@import "@fontsource/monaspace-xenon/500.css";
+@import "@fontsource/monaspace-neon/400.css";
 
 @tailwind base;
 @tailwind components;

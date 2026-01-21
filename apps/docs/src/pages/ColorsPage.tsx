@@ -118,7 +118,7 @@ export function ColorsPage() {
               Colors can be used with Tailwind CSS utility classes using the{" "}
               <Code>chalkboard-</Code> prefix:
             </P>
-            <div className="space-y-2 font-mono text-sm">
+            <div className="space-y-2 text-sm">
               <P>
                 <Code>bg-chalkboard-background</Code> - Background color
               </P>

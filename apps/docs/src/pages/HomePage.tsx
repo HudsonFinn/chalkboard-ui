@@ -13,7 +13,6 @@ import {
   P,
   Lead,
   Small,
-  Code,
   Pre,
 } from "chalkboard-ui";
 
@@ -55,37 +54,28 @@ import "chalkboard-ui/styles.css";`}</Pre>
 
             {/* Option 2 */}
             <div>
-              <P className="mb-2 font-semibold">Option 2: Tailwind CSS integration</P>
+              <P className="mb-2 font-semibold">Option 2: Tailwind CSS integration (recommended)</P>
               <P className="mb-3 text-sm text-chalkboard-foreground/70">
-                Add the library to your <Code>tailwind.config.ts</Code>:
+                Use the library's Tailwind config as a preset to inherit all theme settings:
               </P>
               <Pre className="my-0">{`import type { Config } from "tailwindcss";
+import chalkboardConfig from "chalkboard-ui/tailwind.config";
 
 const config: Config = {
+  presets: [chalkboardConfig],
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/chalkboard-ui/dist/**/*.js",
   ],
-  theme: {
-    extend: {
-      colors: {
-        chalkboard: {
-          background: "#FFFAF6",
-          foreground: "#0d1321",
-          primary: "#66717e",
-          secondary: "#8d818c",
-          success: "#63821B",
-          error: "#F76350",
-          info: "#9DCBBA",
-          warning: "#FDF5BF",
-        },
-      },
-    },
-  },
   plugins: [],
 };
 
 export default config;`}</Pre>
+              <P className="mt-3 text-sm text-chalkboard-foreground/70">
+                You'll also need to import the styles for the fonts:
+              </P>
+              <Pre className="my-0">{`// main.tsx or App.tsx
+import "chalkboard-ui/styles.css";`}</Pre>
             </div>
           </div>
 
