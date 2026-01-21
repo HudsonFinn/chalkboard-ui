@@ -5,6 +5,9 @@ export type { ButtonProps } from "./components/atoms/Button";
 export { Icon } from "./components/atoms/Icon";
 export type { IconName, IconProps } from "./components/atoms/Icon";
 
+export { Tag } from "./components/atoms/Tag";
+export type { TagProps } from "./components/atoms/Tag";
+
 export {
   H1,
   H2,

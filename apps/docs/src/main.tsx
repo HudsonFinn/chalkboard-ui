@@ -9,6 +9,7 @@ import { DropdownPage } from "./pages/DropdownPage";
 import { TypographyPage } from "./pages/TypographyPage";
 import { ColorsPage } from "./pages/ColorsPage";
 import { MessagePage } from "./pages/MessagePage";
+import { TagPage } from "./pages/TagPage";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="typography" element={<TypographyPage />} />
           <Route path="colors" element={<ColorsPage />} />
           <Route path="message" element={<MessagePage />} />
+          <Route path="tag" element={<TagPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

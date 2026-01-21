@@ -24,6 +24,7 @@ const navSections: NavSection[] = [
       { path: "/colors", label: "Colors", icon: "star" },
       { path: "/button", label: "Button", icon: "plus" },
       { path: "/icon", label: "Icon", icon: "star" },
+      { path: "/tag", label: "Tag", icon: "link" },
       { path: "/typography", label: "Typography", icon: "edit" },
     ],
   },

@@ -101,6 +101,23 @@ import { Button } from "chalkboard-ui";
 | `leftIcon` | `IconName` | - | Icon before text |
 | `rightIcon` | `IconName` | - | Icon after text |
 
+### Tag
+
+Tags are used to label and categorize content such as blog posts, products, or tasks.
+
+```tsx
+import { Tag } from "chalkboard-ui";
+
+<Tag>Travel</Tag>
+<Tag icon="star">Featured</Tag>
+<Tag icon="user">Author</Tag>
+```
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `icon` | `IconName` | - | Optional icon before text |
+| `className` | `string` | `""` | Additional classes |
+
 ### DropdownMenu
 
 ```tsx
