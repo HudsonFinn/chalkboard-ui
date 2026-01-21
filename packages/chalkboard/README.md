@@ -101,22 +101,25 @@ import { Button } from "chalkboard-ui";
 | `leftIcon` | `IconName` | - | Icon before text |
 | `rightIcon` | `IconName` | - | Icon after text |
 
-### Tag
+### Input
 
-Tags are used to label and categorize content such as blog posts, products, or tasks.
+A text input component for collecting user input with focus highlighting.
 
 ```tsx
-import { Tag } from "chalkboard-ui";
+import { Input } from "chalkboard-ui";
 
-<Tag>Travel</Tag>
-<Tag icon="star">Featured</Tag>
-<Tag icon="user">Author</Tag>
+<Input placeholder="Enter your name" />
+<Input defaultValue="John Doe" />
+<Input size="lg" placeholder="Large input" />
 ```
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `icon` | `IconName` | - | Optional icon before text |
-| `className` | `string` | `""` | Additional classes |
+| `placeholder` | `string` | - | Placeholder text |
+| `defaultValue` | `string` | - | Default input value |
+| `size` | `"sm"` \| `"md"` \| `"lg"` | `"md"` | Input size |
+| `disabled` | `boolean` | `false` | Disable the input |
+| `type` | `string` | `"text"` | Input type (text, email, password, etc.) |
 
 ### DropdownMenu
 
@@ -150,6 +153,23 @@ import {
 | `iconName` | `IconName` | Icon to display |
 | `onClick` | `() => void` | Click handler |
 | `disabled` | `boolean` | Disable the item |
+
+### Tag
+
+Tags are used to label and categorize content such as blog posts, products, or tasks.
+
+```tsx
+import { Tag } from "chalkboard-ui";
+
+<Tag>Travel</Tag>
+<Tag icon="star">Featured</Tag>
+<Tag icon="user">Author</Tag>
+```
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `icon` | `IconName` | - | Optional icon before text |
+| `className` | `string` | `""` | Additional classes |
 
 ### Typography
 

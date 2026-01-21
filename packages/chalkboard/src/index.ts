@@ -5,8 +5,8 @@ export type { ButtonProps } from "./components/atoms/Button";
 export { Icon } from "./components/atoms/Icon";
 export type { IconName, IconProps } from "./components/atoms/Icon";
 
-export { Tag } from "./components/atoms/Tag";
-export type { TagProps } from "./components/atoms/Tag";
+export { Input } from "./components/atoms/Input";
+export type { InputProps } from "./components/atoms/Input";
 
 export {
   H1,
@@ -56,3 +56,6 @@ export type { CodeExampleProps } from "./components/molecules/CodeExample";
 
 export { Message } from "./components/molecules/Message";
 export type { MessageProps, MessageVariant } from "./components/molecules/Message";
+
+export { Tag } from "./components/molecules/Tag";
+export type { TagProps } from "./components/molecules/Tag";

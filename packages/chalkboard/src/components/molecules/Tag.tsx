@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Icon, IconName } from "./Icon";
+import { Icon, IconName } from "../atoms/Icon";
 
 export interface TagProps extends React.HTMLAttributes<HTMLSpanElement> {
   icon?: IconName;

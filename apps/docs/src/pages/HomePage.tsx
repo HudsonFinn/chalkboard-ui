@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import {
   Button,
   Icon,
+  Input,
+  Tag,
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
@@ -183,6 +185,26 @@ function App() {
             </div>
           </Link>
 
+          {/* Input Preview */}
+          <Link
+            to="/input"
+            className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
+          >
+            <div className="mb-4 flex items-center justify-between">
+              <H3 className="text-lg">Input</H3>
+              <Icon
+                name="arrow-right"
+                className="text-chalkboard-primary transition-transform group-hover:translate-x-1"
+              />
+            </div>
+            <P className="mb-4 text-sm text-chalkboard-foreground/70">
+              Text input with placeholder, sizes, and focus highlighting.
+            </P>
+            <div onClick={(e) => e.preventDefault()}>
+              <Input size="sm" placeholder="Enter text..." />
+            </div>
+          </Link>
+
           {/* Typography Preview */}
           <Link
             to="/typography"
@@ -268,6 +290,28 @@ function App() {
             <div className="space-y-2">
               <Message variant="success">Operation completed</Message>
               <Message variant="error">Something went wrong</Message>
+            </div>
+          </Link>
+
+          {/* Tag Preview */}
+          <Link
+            to="/tag"
+            className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
+          >
+            <div className="mb-4 flex items-center justify-between">
+              <H3 className="text-lg">Tag</H3>
+              <Icon
+                name="arrow-right"
+                className="text-chalkboard-primary transition-transform group-hover:translate-x-1"
+              />
+            </div>
+            <P className="mb-4 text-sm text-chalkboard-foreground/70">
+              Labels for categorizing content with optional icons.
+            </P>
+            <div className="flex flex-wrap gap-2">
+              <Tag icon="star">Featured</Tag>
+              <Tag>Travel</Tag>
+              <Tag>Design</Tag>
             </div>
           </Link>
         </div>

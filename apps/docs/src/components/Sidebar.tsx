@@ -24,7 +24,7 @@ const navSections: NavSection[] = [
       { path: "/colors", label: "Colors", icon: "star" },
       { path: "/button", label: "Button", icon: "plus" },
       { path: "/icon", label: "Icon", icon: "star" },
-      { path: "/tag", label: "Tag", icon: "link" },
+      { path: "/input", label: "Input", icon: "edit" },
       { path: "/typography", label: "Typography", icon: "edit" },
     ],
   },
@@ -33,6 +33,7 @@ const navSections: NavSection[] = [
     items: [
       { path: "/dropdown", label: "Dropdown Menu", icon: "chevron-down" },
       { path: "/message", label: "Message", icon: "info" },
+      { path: "/tag", label: "Tag", icon: "link" },
     ],
   },
 ];
