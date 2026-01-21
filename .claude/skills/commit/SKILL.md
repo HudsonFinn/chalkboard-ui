@@ -39,9 +39,13 @@ If there are no changes to commit, inform the user and stop.
 
 If there are unstaged changes, ask the user which files they want to include in the commit.
 
-### Step 3: Review Code Quality
+### Step 3: Review Code Quality (if code changes detected)
 
-Carefully review ALL changed code (both staged and to-be-staged) for:
+**Skip this step** if only non-code files are changed (e.g., `.md`, `.json`, `.yaml`, `.yml`, `.txt`, `.env*`, config files).
+
+**Perform code review** if any source code files are changed (`.ts`, `.tsx`, `.js`, `.jsx`, `.css`, `.scss`, etc.).
+
+When reviewing, check for:
 
 1. **Edge Cases**: Are all edge cases handled? Consider:
    - Null/undefined values
@@ -66,7 +70,7 @@ Carefully review ALL changed code (both staged and to-be-staged) for:
 
 ### Step 4: Report Issues (if any)
 
-If you find ANY issues during the code review:
+If you performed a code review and found issues:
 
 1. List each issue clearly with:
    - File and line number
