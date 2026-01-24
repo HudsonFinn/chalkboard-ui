@@ -11,6 +11,7 @@ import { ColorsPage } from "./pages/ColorsPage";
 import { MessagePage } from "./pages/MessagePage";
 import { TagPage } from "./pages/TagPage";
 import { InputPage } from "./pages/InputPage";
+import { PreviewPage } from "./pages/PreviewPage";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -27,6 +28,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="message" element={<MessagePage />} />
           <Route path="tag" element={<TagPage />} />
           <Route path="input" element={<InputPage />} />
+          <Route path="preview" element={<PreviewPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -9,6 +9,10 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   Message,
+  Preview,
+  PreviewHeader,
+  PreviewDescription,
+  PreviewContent,
   H1,
   H2,
   H3,
@@ -110,46 +114,28 @@ function App() {
 
         <div className="grid gap-8 md:grid-cols-2">
           {/* Colors Preview */}
-          <Link
-            to="/colors"
-            className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
-          >
-            <div className="mb-4 flex items-center justify-between">
-              <H3 className="text-lg">Colors</H3>
-              <Icon
-                name="arrow-right"
-                className="text-chalkboard-primary transition-transform group-hover:translate-x-1"
-              />
-            </div>
-            <P className="mb-4 text-sm text-chalkboard-foreground/70">
+          <Preview as={Link} href="/colors">
+            <PreviewHeader title="Colors" />
+            <PreviewDescription>
               The chalkboard color palette and semantic colors.
-            </P>
-            <div className="flex gap-1">
+            </PreviewDescription>
+            <PreviewContent className="flex gap-1">
               <div className="h-6 w-6 rounded bg-chalkboard-50" />
               <div className="h-6 w-6 rounded bg-chalkboard-200" />
               <div className="h-6 w-6 rounded bg-chalkboard-400" />
               <div className="h-6 w-6 rounded bg-chalkboard-600" />
               <div className="h-6 w-6 rounded bg-chalkboard-800" />
               <div className="h-6 w-6 rounded bg-chalkboard-950" />
-            </div>
-          </Link>
+            </PreviewContent>
+          </Preview>
 
           {/* Button Preview */}
-          <Link
-            to="/button"
-            className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
-          >
-            <div className="mb-4 flex items-center justify-between">
-              <H3 className="text-lg">Button</H3>
-              <Icon
-                name="arrow-right"
-                className="text-chalkboard-primary transition-transform group-hover:translate-x-1"
-              />
-            </div>
-            <P className="mb-4 text-sm text-chalkboard-foreground/70">
+          <Preview as={Link} href="/button">
+            <PreviewHeader title="Button" />
+            <PreviewDescription>
               Buttons with variants, sizes, and icon support.
-            </P>
-            <div className="flex flex-wrap gap-2">
+            </PreviewDescription>
+            <PreviewContent className="flex flex-wrap gap-2">
               <Button size="sm">Default</Button>
               <Button size="sm" variant="secondary">
                 Secondary
@@ -157,70 +143,43 @@ function App() {
               <Button size="sm" variant="outline">
                 Outline
               </Button>
-            </div>
-          </Link>
+            </PreviewContent>
+          </Preview>
 
           {/* Icon Preview */}
-          <Link
-            to="/icon"
-            className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
-          >
-            <div className="mb-4 flex items-center justify-between">
-              <H3 className="text-lg">Icon</H3>
-              <Icon
-                name="arrow-right"
-                className="text-chalkboard-primary transition-transform group-hover:translate-x-1"
-              />
-            </div>
-            <P className="mb-4 text-sm text-chalkboard-foreground/70">
+          <Preview as={Link} href="/icon">
+            <PreviewHeader title="Icon" />
+            <PreviewDescription>
               23 SVG icons with size and color customization.
-            </P>
-            <div className="flex gap-3">
+            </PreviewDescription>
+            <PreviewContent className="flex gap-3">
               <Icon name="search" />
               <Icon name="settings" />
               <Icon name="star" />
               <Icon name="home" />
               <Icon name="mail" />
               <Icon name="user" />
-            </div>
-          </Link>
+            </PreviewContent>
+          </Preview>
 
           {/* Input Preview */}
-          <Link
-            to="/input"
-            className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
-          >
-            <div className="mb-4 flex items-center justify-between">
-              <H3 className="text-lg">Input</H3>
-              <Icon
-                name="arrow-right"
-                className="text-chalkboard-primary transition-transform group-hover:translate-x-1"
-              />
-            </div>
-            <P className="mb-4 text-sm text-chalkboard-foreground/70">
+          <Preview as={Link} href="/input">
+            <PreviewHeader title="Input" />
+            <PreviewDescription>
               Text input with placeholder, sizes, and focus highlighting.
-            </P>
-            <div onClick={(e) => e.preventDefault()}>
+            </PreviewDescription>
+            <PreviewContent onClick={(e) => e.preventDefault()}>
               <Input size="sm" placeholder="Enter text..." />
-            </div>
-          </Link>
+            </PreviewContent>
+          </Preview>
 
           {/* Typography Preview */}
-          <Link
-            to="/typography"
-            className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
-          >
-            <div className="mb-4 flex items-center justify-between">
-              <H3 className="text-lg">Typography</H3>
-              <Icon
-                name="arrow-right"
-                className="text-chalkboard-primary transition-transform group-hover:translate-x-1"
-              />
-            </div>
-            <P className="mb-4 text-sm text-chalkboard-foreground/70">
+          <Preview as={Link} href="/typography">
+            <PreviewHeader title="Typography" />
+            <PreviewDescription>
               Headings, paragraphs, blockquotes, and code blocks.
-            </P>
-            <div className="space-y-1 text-sm">
+            </PreviewDescription>
+            <PreviewContent className="space-y-1 text-sm">
               <P className="font-semibold">H1 - H6 Headings</P>
               <Small className="block text-chalkboard-foreground/70">
                 Paragraphs, Lead, Small
@@ -228,8 +187,8 @@ function App() {
               <Small className="block text-chalkboard-foreground/70">
                 Code blocks & more
               </Small>
-            </div>
-          </Link>
+            </PreviewContent>
+          </Preview>
         </div>
       </div>
 
@@ -242,21 +201,12 @@ function App() {
 
         <div className="grid gap-8 md:grid-cols-2">
           {/* Dropdown Preview */}
-          <Link
-            to="/dropdown"
-            className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
-          >
-            <div className="mb-4 flex items-center justify-between">
-              <H3 className="text-lg">Dropdown Menu</H3>
-              <Icon
-                name="arrow-right"
-                className="text-chalkboard-primary transition-transform group-hover:translate-x-1"
-              />
-            </div>
-            <P className="mb-4 text-sm text-chalkboard-foreground/70">
+          <Preview as={Link} href="/dropdown">
+            <PreviewHeader title="Dropdown Menu" />
+            <PreviewDescription>
               Hover-triggered dropdown menus with icon support.
-            </P>
-            <div onClick={(e) => e.preventDefault()}>
+            </PreviewDescription>
+            <PreviewContent onClick={(e) => e.preventDefault()}>
               <DropdownMenu>
                 <DropdownMenuTrigger>
                   <Button size="sm" rightIcon="chevron-down">
@@ -269,51 +219,44 @@ function App() {
                   <DropdownMenuItem iconName="trash">Delete</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-            </div>
-          </Link>
+            </PreviewContent>
+          </Preview>
 
           {/* Message Preview */}
-          <Link
-            to="/message"
-            className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
-          >
-            <div className="mb-4 flex items-center justify-between">
-              <H3 className="text-lg">Message</H3>
-              <Icon
-                name="arrow-right"
-                className="text-chalkboard-primary transition-transform group-hover:translate-x-1"
-              />
-            </div>
-            <P className="mb-4 text-sm text-chalkboard-foreground/70">
+          <Preview as={Link} href="/message">
+            <PreviewHeader title="Message" />
+            <PreviewDescription>
               Semantic alert messages for success, error, info, and warning.
-            </P>
-            <div className="space-y-2">
+            </PreviewDescription>
+            <PreviewContent className="space-y-2">
               <Message variant="success">Operation completed</Message>
               <Message variant="error">Something went wrong</Message>
-            </div>
-          </Link>
+            </PreviewContent>
+          </Preview>
+
+          {/* Preview Preview */}
+          <Preview as={Link} href="/preview">
+            <PreviewHeader title="Preview" />
+            <PreviewDescription>
+              Showcase cards with hover effects for navigation or actions.
+            </PreviewDescription>
+            <PreviewContent className="rounded border border-chalkboard-secondary bg-chalkboard-50 p-3 text-sm text-chalkboard-foreground/70">
+              Link to pages or trigger callbacks
+            </PreviewContent>
+          </Preview>
 
           {/* Tag Preview */}
-          <Link
-            to="/tag"
-            className="group rounded-lg border border-chalkboard-secondary bg-white p-6 shadow transition-shadow hover:shadow-md"
-          >
-            <div className="mb-4 flex items-center justify-between">
-              <H3 className="text-lg">Tag</H3>
-              <Icon
-                name="arrow-right"
-                className="text-chalkboard-primary transition-transform group-hover:translate-x-1"
-              />
-            </div>
-            <P className="mb-4 text-sm text-chalkboard-foreground/70">
+          <Preview as={Link} href="/tag">
+            <PreviewHeader title="Tag" />
+            <PreviewDescription>
               Labels for categorizing content with optional icons.
-            </P>
-            <div className="flex flex-wrap gap-2">
+            </PreviewDescription>
+            <PreviewContent className="flex flex-wrap gap-2">
               <Tag icon="star">Featured</Tag>
               <Tag>Travel</Tag>
               <Tag>Design</Tag>
-            </div>
-          </Link>
+            </PreviewContent>
+          </Preview>
         </div>
       </div>
     </div>

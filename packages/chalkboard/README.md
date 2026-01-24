@@ -171,6 +171,79 @@ import { Tag } from "chalkboard-ui";
 | `icon` | `IconName` | - | Optional icon before text |
 | `className` | `string` | `""` | Additional classes |
 
+### Preview
+
+Preview cards for linking to other pages or triggering actions. Commonly used for component showcases, feature highlights, or navigation cards.
+
+```tsx
+import {
+  Preview,
+  PreviewHeader,
+  PreviewDescription,
+  PreviewContent,
+} from "chalkboard-ui";
+
+// With href (renders as anchor)
+<Preview href="/components/button">
+  <PreviewHeader title="Button" />
+  <PreviewDescription>Buttons with variants and sizes.</PreviewDescription>
+  <PreviewContent>
+    <Button>Click me</Button>
+  </PreviewContent>
+</Preview>
+
+// With onClick callback
+<Preview onClick={() => console.log("clicked")}>
+  <PreviewHeader title="Action Card" />
+  <PreviewDescription>Click to trigger an action.</PreviewDescription>
+</Preview>
+
+// With custom link component (e.g., react-router)
+import { Link } from "react-router-dom";
+
+<Preview as={Link} href="/button">
+  <PreviewHeader title="Button" />
+  <PreviewDescription>Client-side navigation.</PreviewDescription>
+</Preview>
+
+// Without interaction (static card)
+<Preview>
+  <PreviewHeader title="Info Card" showArrow={false} />
+  <PreviewDescription>A non-interactive preview.</PreviewDescription>
+</Preview>
+```
+
+**Preview Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `as` | `React.ElementType` | `"a"` | Custom component to render (e.g., react-router's Link) |
+| `href` | `string` | - | URL to navigate to (passed as `to` when using custom component) |
+| `onClick` | `() => void` | - | Click handler (alternative to href) |
+| `className` | `string` | `""` | Additional classes |
+
+**PreviewHeader Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `title` | `string` | required | Title text for the preview |
+| `showArrow` | `boolean` | `true` | Whether to show the animated arrow icon |
+| `className` | `string` | `""` | Additional classes |
+
+**PreviewDescription Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `React.ReactNode` | required | Description text |
+| `className` | `string` | `""` | Additional classes |
+
+**PreviewContent Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `React.ReactNode` | required | Content to render |
+| `className` | `string` | `""` | Additional classes |
+
 ### Typography
 
 A set of semantic typography components with responsive sizing and consistent styling.

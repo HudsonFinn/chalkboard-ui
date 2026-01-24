@@ -33,6 +33,7 @@ const navSections: NavSection[] = [
     items: [
       { path: "/dropdown", label: "Dropdown Menu", icon: "chevron-down" },
       { path: "/message", label: "Message", icon: "info" },
+      { path: "/preview", label: "Preview", icon: "external-link" },
       { path: "/tag", label: "Tag", icon: "link" },
     ],
   },

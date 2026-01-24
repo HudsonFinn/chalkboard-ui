@@ -59,3 +59,16 @@ export type { MessageProps, MessageVariant } from "./components/molecules/Messag
 
 export { Tag } from "./components/molecules/Tag";
 export type { TagProps } from "./components/molecules/Tag";
+
+export {
+  Preview,
+  PreviewHeader,
+  PreviewDescription,
+  PreviewContent,
+} from "./components/molecules/Preview";
+export type {
+  PreviewProps,
+  PreviewHeaderProps,
+  PreviewDescriptionProps,
+  PreviewContentProps,
+} from "./components/molecules/Preview";
