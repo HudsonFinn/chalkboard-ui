@@ -193,7 +193,7 @@ function App() {
       </div>
 
       {/* Molecules Section */}
-      <div>
+      <div className="mb-12">
         <H2 className="mb-2">Molecules</H2>
         <P className="mb-6 text-chalkboard-foreground/70">
           Combinations of atoms that form more complex UI patterns.
@@ -255,6 +255,27 @@ function App() {
               <Tag icon="star">Featured</Tag>
               <Tag>Travel</Tag>
               <Tag>Design</Tag>
+            </PreviewContent>
+          </Preview>
+        </div>
+      </div>
+
+      {/* Organisms Section */}
+      <div>
+        <H2 className="mb-2">Organisms</H2>
+        <P className="mb-6 text-chalkboard-foreground/70">
+          Complex components composed of molecules and atoms.
+        </P>
+
+        <div className="grid gap-8 md:grid-cols-2">
+          {/* Navbar Preview */}
+          <Preview as={Link} href="/navbar">
+            <PreviewHeader title="Navbar" />
+            <PreviewDescription>
+              Responsive sidebar navigation with mobile menu support.
+            </PreviewDescription>
+            <PreviewContent className="rounded border border-chalkboard-secondary bg-chalkboard-50 p-3 text-sm text-chalkboard-foreground/70">
+              See left sidebar for live example
             </PreviewContent>
           </Preview>
         </div>

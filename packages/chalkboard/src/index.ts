@@ -72,3 +72,7 @@ export type {
   PreviewDescriptionProps,
   PreviewContentProps,
 } from "./components/molecules/Preview";
+
+// Organisms
+export { Navbar } from "./components/organisms/Navbar";
+export type { NavbarProps, NavbarItem } from "./components/organisms/Navbar";

@@ -277,6 +277,68 @@ import { H1, H2, H3, P, Lead, Small, Blockquote, Code, Pre } from "chalkboard-ui
 
 All typography components accept standard HTML attributes and support `className` for style overrides.
 
+### Navbar
+
+A responsive sidebar navigation component with mobile menu support.
+
+```tsx
+import { Navbar } from "chalkboard-ui";
+
+const sections = {
+  "": [{ href: "/", label: "Home", icon: "home" }],
+  "Components": [
+    { href: "/button", label: "Button", icon: "plus" },
+    { href: "/input", label: "Input", icon: "edit" },
+  ],
+  "Patterns": [
+    { href: "/forms", label: "Forms" },
+    { href: "/layouts", label: "Layouts" },
+  ],
+};
+
+<Navbar
+  title="My App"
+  footer="© 2024 My Company"
+  sections={sections}
+/>
+
+// With react-router
+import { Link, useLocation } from "react-router-dom";
+
+function AppNavbar() {
+  const location = useLocation();
+
+  return (
+    <Navbar
+      title="My App"
+      sections={sections}
+      linkComponent={Link}
+      isActive={(href) => location.pathname === href}
+    />
+  );
+}
+```
+
+**Navbar Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `title` | `string` | required | Title displayed in the header |
+| `footer` | `string` | - | Footer text displayed at the bottom |
+| `sections` | `Record<string, NavbarItem[]>` | required | Navigation sections (keys are titles, empty string for no title) |
+| `linkComponent` | `React.ElementType` | `"a"` | Custom link component (e.g., react-router's Link) |
+| `isActive` | `(href: string) => boolean` | - | Callback to determine if an item is active |
+| `onItemClick` | `(href: string) => void` | - | Callback when a nav item is clicked |
+| `className` | `string` | `""` | Additional classes |
+
+**NavbarItem:**
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `label` | `string` | Yes | Display text for the nav item |
+| `href` | `string` | Yes | URL to navigate to |
+| `icon` | `IconName` | No | Icon to display before the label |
+
 ## Requirements
 
 - React 18+
