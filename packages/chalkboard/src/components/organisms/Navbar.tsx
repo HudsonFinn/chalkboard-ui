@@ -27,6 +27,8 @@ export interface NavbarProps {
   onItemClick?: (href: string) => void;
   /** Additional CSS classes for the sidebar container */
   className?: string;
+  /** When true, the navbar starts collapsed even on desktop and can be toggled */
+  defaultCollapsed?: boolean;
 }
 
 export function Navbar({
@@ -37,8 +39,9 @@ export function Navbar({
   isActive,
   onItemClick,
   className = "",
+  defaultCollapsed = false,
 }: NavbarProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(!defaultCollapsed);
 
   const handleItemClick = (href: string) => {
     setIsOpen(false);
@@ -50,17 +53,25 @@ export function Navbar({
 
   return (
     <>
-      {/* Mobile menu button */}
-      <Button
-        variant="ghost"
-        icon="menu"
-        onClick={() => setIsOpen(true)}
-        className="fixed left-4 top-4 z-40 bg-white shadow-md lg:hidden"
-        aria-label="Open menu"
-      />
+      {/* Menu button - always visible when defaultCollapsed, otherwise only on mobile */}
+      {!isOpen && (
+        <Button
+          variant="ghost"
+          icon="menu"
+          onClick={() => setIsOpen(true)}
+          className={`fixed left-4 top-4 z-40 bg-white shadow-md ${defaultCollapsed ? "" : "lg:hidden"}`}
+          aria-label="Open menu"
+        />
+      )}
 
       {/* Overlay */}
-      {isOpen && (
+      {isOpen && defaultCollapsed && (
+        <div
+          className="fixed inset-0 z-40 bg-black/50"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+      {isOpen && !defaultCollapsed && (
         <div
           className="fixed inset-0 z-40 bg-black/50 lg:hidden"
           onClick={() => setIsOpen(false)}
@@ -69,9 +80,9 @@ export function Navbar({
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-0 z-50 h-full w-60 transform bg-white shadow-lg transition-transform lg:translate-x-0 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        } ${className}`.trim()}
+        className={`fixed left-0 top-0 z-50 h-full w-60 transform bg-white shadow-lg transition-transform ${
+          defaultCollapsed ? "" : "lg:translate-x-0"
+        } ${isOpen ? "translate-x-0" : "-translate-x-full"} ${className}`.trim()}
       >
         <div className="flex h-full flex-col">
           {/* Header */}
@@ -84,7 +95,7 @@ export function Navbar({
               size="sm"
               icon="close"
               onClick={() => setIsOpen(false)}
-              className="lg:hidden"
+              className={defaultCollapsed ? "" : "lg:hidden"}
               aria-label="Close menu"
             />
           </div>

@@ -95,6 +95,22 @@ const sections = {
           </P>
         </CodeExample>
 
+        <CodeExample
+          title="Collapsed by Default"
+          code={`<Navbar
+  title="My App"
+  sections={sections}
+  defaultCollapsed={true}
+/>`}
+        >
+          <P className="text-sm text-chalkboard-foreground/70">
+            Use <code className="rounded bg-chalkboard-100 px-1">defaultCollapsed</code> to
+            have the navbar start in a collapsed state, even on desktop. Users can toggle
+            it open using the menu button. This is useful for full-width layouts or when
+            you want to maximize content space.
+          </P>
+        </CodeExample>
+
         <div>
           <H3 className="mb-4">NavbarItem Interface</H3>
           <Pre className="my-0">{`interface NavbarItem {

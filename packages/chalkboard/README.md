@@ -330,6 +330,7 @@ function AppNavbar() {
 | `isActive` | `(href: string) => boolean` | - | Callback to determine if an item is active |
 | `onItemClick` | `(href: string) => void` | - | Callback when a nav item is clicked |
 | `className` | `string` | `""` | Additional classes |
+| `defaultCollapsed` | `boolean` | `false` | When true, the navbar starts collapsed even on desktop and can be toggled |
 
 **NavbarItem:**
 
