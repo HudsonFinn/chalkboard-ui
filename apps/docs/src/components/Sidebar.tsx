@@ -22,10 +22,10 @@ const navSections: NavSection[] = [
     title: "Atoms",
     items: [
       { path: "/colors", label: "Colors", icon: "star" },
-      { path: "/button", label: "Button", icon: "plus" },
-      { path: "/icon", label: "Icon", icon: "star" },
-      { path: "/input", label: "Input", icon: "edit" },
       { path: "/typography", label: "Typography", icon: "edit" },
+      { path: "/icon", label: "Icon", icon: "star" },
+      { path: "/button", label: "Button", icon: "plus" },
+      { path: "/input", label: "Input", icon: "edit" },
     ],
   },
   {

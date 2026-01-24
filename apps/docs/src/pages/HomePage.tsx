@@ -129,20 +129,20 @@ function App() {
             </PreviewContent>
           </Preview>
 
-          {/* Button Preview */}
-          <Preview as={Link} href="/button">
-            <PreviewHeader title="Button" />
+          {/* Typography Preview */}
+          <Preview as={Link} href="/typography">
+            <PreviewHeader title="Typography" />
             <PreviewDescription>
-              Buttons with variants, sizes, and icon support.
+              Headings, paragraphs, blockquotes, and code blocks.
             </PreviewDescription>
-            <PreviewContent className="flex flex-wrap gap-2">
-              <Button size="sm">Default</Button>
-              <Button size="sm" variant="secondary">
-                Secondary
-              </Button>
-              <Button size="sm" variant="outline">
-                Outline
-              </Button>
+            <PreviewContent className="space-y-1 text-sm">
+              <P className="font-semibold">H1 - H6 Headings</P>
+              <Small className="block text-chalkboard-foreground/70">
+                Paragraphs, Lead, Small
+              </Small>
+              <Small className="block text-chalkboard-foreground/70">
+                Code blocks & more
+              </Small>
             </PreviewContent>
           </Preview>
 
@@ -162,6 +162,23 @@ function App() {
             </PreviewContent>
           </Preview>
 
+          {/* Button Preview */}
+          <Preview as={Link} href="/button">
+            <PreviewHeader title="Button" />
+            <PreviewDescription>
+              Buttons with variants, sizes, and icon support.
+            </PreviewDescription>
+            <PreviewContent className="flex flex-wrap gap-2">
+              <Button size="sm">Default</Button>
+              <Button size="sm" variant="secondary">
+                Secondary
+              </Button>
+              <Button size="sm" variant="outline">
+                Outline
+              </Button>
+            </PreviewContent>
+          </Preview>
+
           {/* Input Preview */}
           <Preview as={Link} href="/input">
             <PreviewHeader title="Input" />
@@ -170,23 +187,6 @@ function App() {
             </PreviewDescription>
             <PreviewContent onClick={(e) => e.preventDefault()}>
               <Input size="sm" placeholder="Enter text..." />
-            </PreviewContent>
-          </Preview>
-
-          {/* Typography Preview */}
-          <Preview as={Link} href="/typography">
-            <PreviewHeader title="Typography" />
-            <PreviewDescription>
-              Headings, paragraphs, blockquotes, and code blocks.
-            </PreviewDescription>
-            <PreviewContent className="space-y-1 text-sm">
-              <P className="font-semibold">H1 - H6 Headings</P>
-              <Small className="block text-chalkboard-foreground/70">
-                Paragraphs, Lead, Small
-              </Small>
-              <Small className="block text-chalkboard-foreground/70">
-                Code blocks & more
-              </Small>
             </PreviewContent>
           </Preview>
         </div>
