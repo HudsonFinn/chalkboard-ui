@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Icon, IconName } from "chalkboard-ui";
+import { Button, Icon, IconName } from "chalkboard-ui";
 
 interface NavItem {
   path: string;
@@ -45,13 +45,13 @@ export function Sidebar() {
   return (
     <>
       {/* Mobile menu button */}
-      <button
+      <Button
+        variant="ghost"
+        icon="menu"
         onClick={() => setIsOpen(true)}
-        className="fixed left-4 top-4 z-40 rounded-lg bg-white p-2 shadow-md lg:hidden"
+        className="fixed left-4 top-4 z-40 bg-white shadow-md lg:hidden"
         aria-label="Open menu"
-      >
-        <Icon name="menu" size="md" />
-      </button>
+      />
 
       {/* Overlay */}
       {isOpen && (
@@ -73,13 +73,14 @@ export function Sidebar() {
             <span className="text-lg font-semibold text-chalkboard-foreground">
               Chalkboard UI
             </span>
-            <button
+            <Button
+              variant="ghost"
+              size="sm"
+              icon="close"
               onClick={() => setIsOpen(false)}
-              className="rounded-lg p-1 hover:bg-chalkboard-background lg:hidden"
+              className="lg:hidden"
               aria-label="Close menu"
-            >
-              <Icon name="close" size="md" />
-            </button>
+            />
           </div>
 
           {/* Navigation */}

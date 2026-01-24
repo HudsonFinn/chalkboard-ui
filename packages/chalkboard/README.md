@@ -92,12 +92,15 @@ import { Button } from "chalkboard-ui";
 <Button leftIcon="search">Search</Button>
 <Button rightIcon="arrow-right">Next</Button>
 <Button leftIcon="plus" rightIcon="chevron-down">Add Item</Button>
+<Button variant="ghost">Ghost</Button>
+<Button variant="ghost" icon="menu" aria-label="Menu" />
 ```
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `variant` | `"primary"` \| `"secondary"` \| `"outline"` | `"primary"` | Visual style |
+| `variant` | `"primary"` \| `"secondary"` \| `"outline"` \| `"ghost"` | `"primary"` | Visual style |
 | `size` | `"sm"` \| `"md"` \| `"lg"` | `"md"` | Button size |
+| `icon` | `IconName` | - | Icon for icon-only buttons (children optional) |
 | `leftIcon` | `IconName` | - | Icon before text |
 | `rightIcon` | `IconName` | - | Icon after text |
 

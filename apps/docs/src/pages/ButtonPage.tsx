@@ -16,12 +16,14 @@ export function ButtonPage() {
           title="Variants"
           code={`<Button>Default Button</Button>
 <Button variant="secondary">Secondary</Button>
-<Button variant="outline">Outline</Button>`}
+<Button variant="outline">Outline</Button>
+<Button variant="ghost">Ghost</Button>`}
         >
           <div className="flex flex-wrap gap-4">
             <Button>Default Button</Button>
             <Button variant="secondary">Secondary</Button>
             <Button variant="outline">Outline</Button>
+            <Button variant="ghost">Ghost</Button>
           </div>
         </CodeExample>
 
@@ -58,6 +60,23 @@ export function ButtonPage() {
             <Button variant="secondary" leftIcon="mail">
               Contact
             </Button>
+          </div>
+        </CodeExample>
+
+        <CodeExample
+          title="Icon-Only Buttons"
+          code={`<Button icon="menu" aria-label="Menu" />
+<Button icon="close" variant="ghost" aria-label="Close" />
+<Button icon="settings" variant="outline" aria-label="Settings" />
+<Button icon="plus" size="sm" aria-label="Add" />
+<Button icon="search" size="lg" aria-label="Search" />`}
+        >
+          <div className="flex flex-wrap items-center gap-4">
+            <Button icon="menu" aria-label="Menu" />
+            <Button icon="close" variant="ghost" aria-label="Close" />
+            <Button icon="settings" variant="outline" aria-label="Settings" />
+            <Button icon="plus" size="sm" aria-label="Add" />
+            <Button icon="search" size="lg" aria-label="Search" />
           </div>
         </CodeExample>
 
