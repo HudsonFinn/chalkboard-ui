@@ -14,6 +14,7 @@ const sections: Record<string, NavbarItem[]> = {
     { href: "/dropdown", label: "Dropdown Menu", icon: "chevron-down" },
     { href: "/message", label: "Message", icon: "info" },
     { href: "/preview", label: "Preview", icon: "external-link" },
+    { href: "/table", label: "Table", icon: "menu" },
     { href: "/tag", label: "Tag", icon: "link" },
   ],
   Organisms: [{ href: "/navbar", label: "Navbar", icon: "menu" }],

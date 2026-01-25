@@ -60,6 +60,9 @@ export type { MessageProps, MessageVariant } from "./components/molecules/Messag
 export { Tag } from "./components/molecules/Tag";
 export type { TagProps } from "./components/molecules/Tag";
 
+export { Table } from "./components/molecules/Table";
+export type { TableProps, TableColumn } from "./components/molecules/Table";
+
 export {
   Preview,
   PreviewHeader,

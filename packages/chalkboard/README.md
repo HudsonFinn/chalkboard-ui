@@ -247,6 +247,65 @@ import { Link } from "react-router-dom";
 | `children` | `React.ReactNode` | required | Content to render |
 | `className` | `string` | `""` | Additional classes |
 
+### Table
+
+A flexible table component for displaying tabular data with support for custom cell rendering.
+
+```tsx
+import { Table, TableColumn } from "chalkboard-ui";
+
+interface User {
+  key: string;
+  name: string;
+  age: number;
+  email: string;
+}
+
+const columns: TableColumn<User>[] = [
+  { title: "Name", dataIndex: "name", key: "name" },
+  { title: "Age", dataIndex: "age", key: "age" },
+  { title: "Email", dataIndex: "email", key: "email" },
+  {
+    title: "Actions",
+    key: "actions",
+    render: (_, record) => (
+      <Button size="sm" onClick={() => alert(record.name)}>
+        View
+      </Button>
+    ),
+  },
+];
+
+const users: User[] = [
+  { key: "1", name: "Alice", age: 28, email: "alice@example.com" },
+  { key: "2", name: "Bob", age: 34, email: "bob@example.com" },
+];
+
+<Table columns={columns} dataSource={users} />
+<Table columns={columns} dataSource={users} striped />
+<Table columns={columns} dataSource={users} bordered />
+```
+
+**Table Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `columns` | `TableColumn<T>[]` | required | Column definitions |
+| `dataSource` | `T[]` | required | Data array (each item must have a `key` property) |
+| `striped` | `boolean` | `false` | Show alternating row backgrounds |
+| `hoverable` | `boolean` | `true` | Show hover effect on rows |
+| `bordered` | `boolean` | `false` | Show cell borders |
+| `emptyText` | `ReactNode` | `"No data"` | Content shown when dataSource is empty |
+
+**TableColumn:**
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `title` | `string` | Yes | Column header text |
+| `key` | `string` | Yes | Unique identifier for the column |
+| `dataIndex` | `keyof T` | No | Key to access value from each row |
+| `render` | `(value, record, index) => ReactNode` | No | Custom render function |
+
 ### Typography
 
 A set of semantic typography components with responsive sizing and consistent styling.

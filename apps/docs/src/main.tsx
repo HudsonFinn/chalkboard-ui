@@ -13,6 +13,7 @@ import { TagPage } from "./pages/TagPage";
 import { InputPage } from "./pages/InputPage";
 import { PreviewPage } from "./pages/PreviewPage";
 import { NavbarPage } from "./pages/NavbarPage";
+import { TablePage } from "./pages/TablePage";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -30,6 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="tag" element={<TagPage />} />
           <Route path="input" element={<InputPage />} />
           <Route path="preview" element={<PreviewPage />} />
+          <Route path="table" element={<TablePage />} />
           <Route path="navbar" element={<NavbarPage />} />
         </Route>
       </Routes>
