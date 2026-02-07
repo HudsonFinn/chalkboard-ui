@@ -14,6 +14,7 @@ import { InputPage } from "./pages/InputPage";
 import { PreviewPage } from "./pages/PreviewPage";
 import { NavbarPage } from "./pages/NavbarPage";
 import { TablePage } from "./pages/TablePage";
+import { LineChartPage } from "./pages/LineChartPage";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="input" element={<InputPage />} />
           <Route path="preview" element={<PreviewPage />} />
           <Route path="table" element={<TablePage />} />
+          <Route path="linechart" element={<LineChartPage />} />
           <Route path="navbar" element={<NavbarPage />} />
         </Route>
       </Routes>

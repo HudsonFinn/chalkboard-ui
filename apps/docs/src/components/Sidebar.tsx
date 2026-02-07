@@ -12,6 +12,7 @@ const sections: Record<string, NavbarItem[]> = {
   ],
   Molecules: [
     { href: "/dropdown", label: "Dropdown Menu", icon: "chevron-down" },
+    { href: "/linechart", label: "LineChart", icon: "star" },
     { href: "/message", label: "Message", icon: "info" },
     { href: "/preview", label: "Preview", icon: "external-link" },
     { href: "/table", label: "Table", icon: "menu" },

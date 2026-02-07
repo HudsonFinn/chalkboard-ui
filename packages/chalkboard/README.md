@@ -306,6 +306,52 @@ const users: User[] = [
 | `dataIndex` | `keyof T` | No | Key to access value from each row |
 | `render` | `(value, record, index) => ReactNode` | No | Custom render function |
 
+### LineChart
+
+A custom SVG-based line chart component for visualizing trends and data over time.
+
+```tsx
+import { LineChart } from "chalkboard-ui";
+
+const data = [
+  { label: "Jan", value: 120 },
+  { label: "Feb", value: 180 },
+  { label: "Mar", value: 90 },
+  { label: "Apr", value: 240 },
+];
+
+<LineChart data={data} />
+<LineChart data={data} smooth />
+<LineChart data={data} showArea smooth />
+<LineChart data={data} showGrid={false} />
+<LineChart
+  data={stockData}
+  formatYTick={(v) => `$${v.toFixed(2)}`}
+/>
+```
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `data` | `LineChartDataPoint[]` | required | Data points with `label` and `value` |
+| `width` | `number` | `400` | Chart width in pixels |
+| `height` | `number` | `300` | Chart height in pixels |
+| `showGrid` | `boolean` | `true` | Show background grid lines |
+| `showPoints` | `boolean` | `true` | Show circles at data points |
+| `smooth` | `boolean` | `false` | Use smooth curves instead of straight lines |
+| `showArea` | `boolean` | `false` | Show filled area under the line |
+| `showTooltip` | `boolean` | `true` | Show tooltip on hover |
+| `lineColor` | `string` | - | Custom line color (uses chalkboard-primary by default) |
+| `formatYTick` | `(value: number) => string` | - | Format function for y-axis labels |
+| `formatTooltip` | `(label: string, value: number) => string` | - | Format function for tooltip text |
+| `yTickCount` | `number` | `5` | Number of y-axis tick marks |
+
+**LineChartDataPoint:**
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `label` | `string` | Label for the x-axis |
+| `value` | `number` | Numeric value for the y-axis |
+
 ### Typography
 
 A set of semantic typography components with responsive sizing and consistent styling.

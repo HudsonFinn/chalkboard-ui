@@ -63,6 +63,9 @@ export type { TagProps } from "./components/molecules/Tag";
 export { Table } from "./components/molecules/Table";
 export type { TableProps, TableColumn } from "./components/molecules/Table";
 
+export { LineChart } from "./components/molecules/LineChart";
+export type { LineChartProps, LineChartDataPoint } from "./components/molecules/LineChart";
+
 export {
   Preview,
   PreviewHeader,
