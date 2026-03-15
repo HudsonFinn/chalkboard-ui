@@ -9,6 +9,7 @@ const sections: Record<string, NavbarItem[]> = {
     { href: "/icon", label: "Icon", icon: "star" },
     { href: "/button", label: "Button", icon: "plus" },
     { href: "/input", label: "Input", icon: "edit" },
+    { href: "/list", label: "List", icon: "menu" },
   ],
   Molecules: [
     { href: "/dropdown", label: "Dropdown Menu", icon: "chevron-down" },

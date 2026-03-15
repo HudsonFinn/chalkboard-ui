@@ -2,6 +2,9 @@ export { Button } from "./Button";
 export type { ButtonProps } from "./Button";
 
 export { Icon } from "./Icon";
+
+export { List, ListItem } from "./List";
+export type { ListProps, ListItemProps } from "./List";
 export type { IconName, IconProps } from "./Icon";
 
 export {

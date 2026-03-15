@@ -352,6 +352,41 @@ const data = [
 | `label` | `string` | Label for the x-axis |
 | `value` | `number` | Numeric value for the y-axis |
 
+### List
+
+Styled list components for displaying items in unordered or ordered format.
+
+```tsx
+import { List, ListItem } from "chalkboard-ui";
+
+<List>
+  <ListItem>First item</ListItem>
+  <ListItem>Second item</ListItem>
+  <ListItem>Third item</ListItem>
+</List>
+
+<List ordered>
+  <ListItem>Step one</ListItem>
+  <ListItem>Step two</ListItem>
+  <ListItem>Step three</ListItem>
+</List>
+```
+
+**List Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `ordered` | `boolean` | `false` | Render as `<ol>` instead of `<ul>` |
+| `className` | `string` | `""` | Additional classes |
+
+**ListItem Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `className` | `string` | `""` | Additional classes |
+
+Both components accept standard HTML attributes and support `ref` forwarding.
+
 ### Typography
 
 A set of semantic typography components with responsive sizing and consistent styling.

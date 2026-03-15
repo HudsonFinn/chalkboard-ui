@@ -8,6 +8,9 @@ export type { IconName, IconProps } from "./components/atoms/Icon";
 export { Input } from "./components/atoms/Input";
 export type { InputProps } from "./components/atoms/Input";
 
+export { List, ListItem } from "./components/atoms/List";
+export type { ListProps, ListItemProps } from "./components/atoms/List";
+
 export {
   H1,
   H2,
